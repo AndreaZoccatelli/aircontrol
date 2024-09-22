@@ -11,7 +11,7 @@ import sys
 
 sys.path.insert(0, os.path.abspath("../.."))
 
-project = "Light PERMANOVA"
+project = "AirControl"
 author = """
 <a href="https://www.linkedin.com/in/andrea-zoccatelli/" target="_blank">Andrea Zoccatelli</a>
 """
@@ -26,7 +26,9 @@ extensions = [
     "myst_parser",
     "sphinx_markdown_builder",
     "nbsphinx",
+    "sphinxcontrib.youtube",
 ]
+
 source_suffix = [".rst", ".md"]
 myst_enable_extensions = ["dollarmath"]
 
