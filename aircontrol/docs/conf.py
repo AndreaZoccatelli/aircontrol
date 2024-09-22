@@ -26,7 +26,6 @@ extensions = [
     "myst_parser",
     "sphinx_markdown_builder",
     "nbsphinx",
-    "sphinxcontrib.youtube",
 ]
 
 source_suffix = [".rst", ".md"]
