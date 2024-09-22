@@ -1,16 +1,32 @@
 import pyautogui
 
+
 def new_mail():
-    pyautogui.press('c')
+    """
+    Open tab to write a new email
+    """
+    pyautogui.press("c")
 
-def open_starred():
-    with pyautogui.hold('g'):
-        pyautogui.press('s')
-
-def open_sent():
-    with pyautogui.hold('g'):
-        pyautogui.press('t')
 
 def open_drafts():
-    with pyautogui.hold('g'):
-        pyautogui.press('d')
+    """
+    Open draft emails
+    """
+    with pyautogui.hold("g"):
+        pyautogui.press("d")
+
+
+def open_sent():
+    """
+    Open sent emails tab
+    """
+    with pyautogui.hold("g"):
+        pyautogui.press("t")
+
+
+def open_starred():
+    """
+    Open starred emails tab
+    """
+    with pyautogui.hold("g"):
+        pyautogui.press("s")

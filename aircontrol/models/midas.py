@@ -4,8 +4,23 @@ import numpy as np
 
 
 class MidasModel:
-    def __init__(self) -> None:
-        self.midas = torch.hub.load("intel-isl/MiDaS", "DPT_Hybrid")
+    """
+    Class to load Intel MiDaS model and make predictions
+    """
+
+    def __init__(self, model: str = "DPT_Hybrid") -> None:
+        """
+        Args:
+            model (str): MiDaS model version, available options are ["MiDaS_small", "DPT_Hybrid", "DPT_Large"]. Defaults to "DPT_Hybrid".
+
+        Raises:
+            ValueError: if model is not one of ["MiDaS_small", "DPT_Hybrid", "DPT_Large"]
+        """
+        if model not in ["MiDaS_small", "DPT_Hybrid", "DPT_Large"]:
+            raise ValueError(
+                "Available models are ['MiDaS_small', 'DPT_Hybrid', 'DPT_Large']"
+            )
+        self.midas = torch.hub.load("intel-isl/MiDaS", model)
         self.device = (
             torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
         )
@@ -13,7 +28,14 @@ class MidasModel:
         transforms = torch.hub.load("intel-isl/MiDaS", "transforms")
         self.transform = transforms.small_transform
 
-    def predict_adjust(self, frame):
+    def predict_adjust(self, frame: np.ndarray) -> np.ndarray:
+        """
+        Args:
+            frame (np.ndarray): frame captured by webcam
+
+        Returns:
+            np.ndarray: depth map of the frame
+        """
         imgbatch = self.transform(frame).to(self.device)
         with torch.no_grad():
             prediction = self.midas(imgbatch)
@@ -29,7 +51,6 @@ class MidasModel:
         output_norm = cv.normalize(
             output, None, 0, 1, norm_type=cv.NORM_MINMAX, dtype=cv.CV_32F
         )
-        frame = frame.astype(np.float32) / 255.0
-        adjusted_frame = np.clip(frame * output_norm[:, :, np.newaxis], 0, 1)
-        adjusted_frame = (adjusted_frame * 255).astype(np.uint8)
+        adjusted_frame = frame * output_norm[:, :, np.newaxis]
+        adjusted_frame = adjusted_frame.astype(np.uint8)
         return adjusted_frame

@@ -1,11 +1,23 @@
 import pyautogui
 
+
 def full_screen():
+    """
+    Make video full screen
+    """
     pyautogui.press("f")
 
-def pause():
-    pyautogui.press("space")
 
 def next_video():
-    with pyautogui.hold('shift'):
-        pyautogui.press('n')
+    """
+    Skip to next video
+    """
+    with pyautogui.hold("shift"):
+        pyautogui.press("n")
+
+
+def pause():
+    """
+    Pause video
+    """
+    pyautogui.press("space")

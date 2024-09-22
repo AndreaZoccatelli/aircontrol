@@ -5,10 +5,10 @@ from .hotkeys.gmail_hotkeys import *
 
 window_aware_gestures = {
     "General": {
-        "one": multi_task,
-        "peace": multi_task,
-        "three2": multi_task,
-        "four": multi_task,
+        "one": voice_type,
+        "peace": notifications_center,
+        "three2": file_explorer,
+        "four": settings,
         "palm": {"Right": split_right, "Center": screen_capture, "Left": split_left},
         "fist": multi_task,
     },
