@@ -7,6 +7,6 @@ Demo:
 [![Demo](https://img.youtube.com/vi/Cifi5REe2wY/0.jpg)](https://www.youtube.com/watch?v=Cifi5REe2wY)
 
 ## Useful links
-Read the docs [here](https://aircontrol.readthedocs.io/en/latest/index.html).
+Read the docs [here](https://air-control.readthedocs.io/en/latest/index.html).
 
 This project is part of "[Root.](https://andrea-zoccatelli.gitbook.io/me/v/root.)".
