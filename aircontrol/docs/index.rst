@@ -8,10 +8,6 @@ AirControl documentation
 
 AirControl is a tool to control PC with gestures.
 
-.. youtube:: Cifi5REe2wY
-   :width: 480
-   :height: 360
-
 Go to the `GitHub Repository <https://github.com/AndreaZoccatelli/aircontrol>`_.
 
 This project is part of "`Root. <https://andrea-zoccatelli.gitbook.io/me/v/root.>`_".

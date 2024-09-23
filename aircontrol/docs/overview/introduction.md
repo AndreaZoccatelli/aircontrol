@@ -1,4 +1,4 @@
-# AirControl
+# Overview
 AirControl is a tool to control PC with gestures, based on <a href="https://ai.google.dev/edge/mediapipe/solutions/guide" target="_blank">Google MediaPipe</a> and <a href="https://github.com/isl-org/MiDaS" target="_blank">Intel MiDaS</a>.
 
 <iframe width="720" height="360" src="https://www.youtube.com/embed/Cifi5REe2wY" title="AirControl demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
