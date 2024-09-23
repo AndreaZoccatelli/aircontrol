@@ -6,4 +6,4 @@ AirControl
 
    overview/introduction.md
    utils
-   hotkeys/hotkeys
+   hotkeys_docs/hotkeys_docs
