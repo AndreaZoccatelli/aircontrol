@@ -7,7 +7,7 @@ AirControl is a tool to control PC with gestures, based on <a href="https://ai.g
 ![HaGRID gesture](media/gestures.jpg)
 The gestures available are some of the ones provided in the  <a href="https://github.com/hukenovs/hagrid" target="_blank">HaGRID dataset</a> (shown in the picture): "fist", "four", "one", "palm", "peace" and "three 2".
 
-If you want to retrain MediaPipe and add more gestures, see the notebook mediapipe_fine_tuning.
+If you want to retrain MediaPipe and add more gestures, see the notebook [mediapipe_fine_tuning](https://github.com/AndreaZoccatelli/aircontrol/blob/master/mediapipe_fine_tuning.ipynb).
 
 ## Improving recognition with MiDaS
 Gesture recognition can be disturbed by objects and light reflection in the background of the scene captured by the webcam. To make the task easier, the depth mask predicted by MiDaS has been leveraged; for every frame:
